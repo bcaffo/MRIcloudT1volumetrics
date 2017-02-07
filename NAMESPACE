@@ -1,3 +1,1 @@
-S3method(check,nifti)
-export(corCreate)
-import(oro.nifti)
+
