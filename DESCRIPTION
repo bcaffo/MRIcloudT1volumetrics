@@ -1,0 +1,19 @@
+Package: rsfmriGraph
+Type: Package
+Title: rsfmriGraph
+Version: 0.0.1
+Date: 2012-06-20
+Author: Brian Caffo
+Maintainer: Brian Caffo <bcaffo@gmail.com>
+Description: A subpackage of BRISK for analyzing resting state fMRI graphs
+License: GPL-3
+Depends:
+    AnalyzeFMRI,
+    R.utils,
+    parallel,
+    rgl,
+    misc3d,
+    oro.nifti,
+    glasso
+
+
