@@ -2,6 +2,8 @@
 ## requires the files to be in the specific format for this dataset that I'm looking at
 ## Brian Caffo 2/6/2017
 
+
+
 readSubject = function(fileloc){
 
     ## read in all of the text file

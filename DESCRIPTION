@@ -1,6 +1,6 @@
-Package: 
+Package: MRIcloudR
 Type: Package
-Title: 
+Title: mricloudr
 Version: 0.0.1
 Date: 2017-02-07
 Author: Brian Caffo
