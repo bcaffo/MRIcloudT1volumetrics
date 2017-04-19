@@ -2,15 +2,13 @@
 ## requires the files to be in the specific format for this dataset that I'm looking at
 ## Brian Caffo 2/6/2017
 
-
-
 readSubject = function(fileloc){
 
     ## read in all of the text file
     fullData = readLines(fileloc)
 
     ## get the indices of the levels and type labels
-    ## I have no idea if these are common across subjects, they seem to be
+    ## These might be common across subjects; they seem to be
     ## however, it's more conservative to do it every time
     tlidx = t(apply(expand.grid(1 : 2, 1 : 5), 1, 
         function(x) {
@@ -37,8 +35,8 @@ readSubject = function(fileloc){
                             collapse = "\n")
             dat = read.table(textConnection(toparse),
                              fill = TRUE,
-                             stringsAsFactors = FALSE)[,1 : 3]
-            colnames(dat) = c("rawid", "roi", "volume")
+                             stringsAsFactors = FALSE)#[,1 : 3]
+            colnames(dat) = c("rawid", "roi", "volume", "min",	"max",	"mean",	"std")
             dat$type = tlidx[i,1]
             dat$level = tlidx[i,2]
             return(dat)
