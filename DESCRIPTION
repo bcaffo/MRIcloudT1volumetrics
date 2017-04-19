@@ -1,13 +1,12 @@
-Package: MRIcloudR
+Package: MRIcloudRT1volumetrics
 Type: Package
-Title: mricloudr
+Title: MRIcloud Analysis of T1 Volumetric Output
 Version: 0.0.1
 Date: 2017-02-07
 Author: Brian Caffo
+Authors@R: person("Brian", "Caffo", email = "bcaffo@gmail.com", role = c("aut", "cre"))
 Maintainer: Brian Caffo <bcaffo@gmail.com>
-Description: 
+Description: This package parses the output from the T1 volumetric output from MRIcloud. 
 License: GPL-3
-Depends:
-
-
-
+Depends: 
+Suggests:

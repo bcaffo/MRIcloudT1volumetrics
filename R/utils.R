@@ -9,3 +9,12 @@ addSubjectICV = function(subjectData){
     return(subjectData)
 }
 
+
+addSubjectTBV = function(subjectData){
+    require(dplyr)
+    l1t1 = filter(subjectData, level == 1, type == 1, roi != "CSF")
+    tbv = sum(l1t1$volume)
+    subjectData = mutate(subjectData, tbv = tbv)
+    
+    return(subjectData)
+}
