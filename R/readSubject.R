@@ -1,6 +1,12 @@
-## reads in a subject given the full path to the file
-## requires the files to be in the specific format for this dataset that I'm looking at
-## Brian Caffo 2/6/2017
+#' @title readSubject
+#' @description A utility function for parsing the output of MRIcloud volumetric output
+#' @details  This function takes in a filename that consist of volumetric output from
+#' MRIcloud. It then parses it into a list of dataframes of the various combinations 
+#' of levels and outputs. It requires the full path of to the file as text input.
+#' @author Brian Caffo
+#' @name readSubject
+#' @param fileloc the location of the volumetric processed output text file
+#' @keywords MRI
 
 readSubject = function(fileloc){
 
