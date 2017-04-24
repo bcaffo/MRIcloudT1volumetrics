@@ -4,10 +4,13 @@
 \alias{readSubject}
 \title{readSubject}
 \usage{
-readSubject(fileloc)
+readSubject(fileLoc)
 }
 \arguments{
-\item{fileloc}{the location of the volumetric processed output text file}
+\item{fileLoc}{the location of the volumetric processed output text file}
+}
+\value{
+A list containing one list element per type/level combination
 }
 \description{
 A utility function for parsing the output of MRIcloud volumetric output
@@ -17,8 +20,12 @@ This function takes in a filename that consist of volumetric output from
 MRIcloud. It then parses it into a list of dataframes of the various combinations 
 of levels and outputs. It requires the full path of to the file as text input.
 }
+\examples{
+fileLoc = system.file("extdata", "kirby127a_3_1_ax_283Labels_M2_corrected_stats.txt", package="MRIcloudT1volumetrics")
+test = readSubject(fileLoc)
+test[[1]]
+}
 \author{
 Brian Caffo
 }
-\keyword{MRI,}
-\keyword{structural}
+\keyword{MRI}

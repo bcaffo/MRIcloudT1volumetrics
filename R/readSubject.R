@@ -5,13 +5,19 @@
 #' of levels and outputs. It requires the full path of to the file as text input.
 #' @author Brian Caffo
 #' @name readSubject
-#' @param fileloc the location of the volumetric processed output text file
+#' @param fileLoc the location of the volumetric processed output text file
+#' @return A list containing one list element per type/level combination
 #' @keywords MRI
+#' @export
+#' @examples 
+#' fileLoc = system.file("extdata", "kirby127a_3_1_ax_283Labels_M2_corrected_stats.txt", package="MRIcloudT1volumetrics")
+#' test = readSubject(fileLoc)
+#' test[[1]]
 
-readSubject = function(fileloc){
+readSubject = function(fileLoc){
 
     ## read in all of the text file
-    fullData = readLines(fileloc)
+    fullData = readLines(fileLoc)
 
     ## get the indices of the levels and type labels
     ## These might be common across subjects; they seem to be

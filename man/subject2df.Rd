@@ -6,6 +6,9 @@
 \usage{
 subject2df(subjectData)
 }
+\arguments{
+\item{subjectData}{the output from readSubject}
+}
 \description{
 Takes a subject from readSubject and converts it into a single
 dataframe

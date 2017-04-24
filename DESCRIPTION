@@ -1,4 +1,4 @@
-Package: MRIcloudRT1volumetrics
+Package: MRIcloudT1volumetrics
 Type: Package
 Title: MRIcloud Analysis of T1 Volumetric Output
 Version: 0.0.1
@@ -9,5 +9,11 @@ Maintainer: Brian Caffo <bcaffo@gmail.com>
 Description: This package parses the output from the T1 volumetric output from MRIcloud. 
 License: GPL-3
 Depends: 
+Imports: 
+    dplyr,
+    magrittr
 Suggests:
+    knitr,
+    rmarkdown
 RoxygenNote: 6.0.1
+VignetteBuilder: knitr

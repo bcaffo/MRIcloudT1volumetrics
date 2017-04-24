@@ -1,0 +1,30 @@
+---
+title: "MRIcloudT1volumetrics"
+author: "Brian Caffo"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+`MRIcloudT1volumetrics` is an R package for working with the
+output of MRIcloud T1 volumetric data. As of this writing, the
+package has three purposes:
+
+1. It text parses and reads in data from the most popular T1 processing
+algorithms through the function `readSubject`
+2. It can convert that data into a dataframe.
+3. It can read in a series of files and concatentate them into a dataframe
+
+
+Here's an example of basic reading in of one subject. 
+```{r}
+library(MRIcloudT1volumetrics)
+fileLoc = system.file("extdata", "kirby127a_3_1_ax_283Labels_M2_corrected_stats.txt",
+ package="MRIcloudT1volumetrics")
+test = readSubject(fileLoc)
+length(test)
+test[[1]]
+```
