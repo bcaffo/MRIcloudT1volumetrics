@@ -10,10 +10,12 @@
 #' @keywords MRI
 #' @export
 #' @examples 
-#' fileLoc = system.file("extdata", "kirby127a_3_1_ax_283Labels_M2_corrected_stats.txt", package="MRIcloudT1volumetrics")
+#' fileLoc = system.file("extdata", 
+#' "kirby127a_3_1_ax_283Labels_M2_corrected_stats.txt", 
+#' package="MRIcloudT1volumetrics")
 #' test = readSubject(fileLoc)
 #' test[[1]]
-
+#' @importFrom utils read.table
 readSubject = function(fileLoc){
 
     ## read in all of the text file
@@ -45,7 +47,7 @@ readSubject = function(fileLoc){
             else endline = tlidx[i + 1, 3] - 1
             toparse = paste(fullData[startline : endline], "",
                             collapse = "\n")
-            dat = read.table(textConnection(toparse),
+            dat = utils::read.table(textConnection(toparse),
                              fill = TRUE,
                              stringsAsFactors = FALSE)#[,1 : 3]
             colnames(dat) = c("rawid", "roi", "volume", "min",	"max",	"mean",	"std")

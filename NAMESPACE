@@ -3,3 +3,7 @@
 export(addSubjectICV)
 export(addSubjectTBV)
 export(readSubject)
+importFrom(dplyr,filter)
+importFrom(dplyr,mutate)
+importFrom(magrittr,"%>%")
+importFrom(utils,read.table)

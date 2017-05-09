@@ -21,7 +21,9 @@ MRIcloud. It then parses it into a list of dataframes of the various combination
 of levels and outputs. It requires the full path of to the file as text input.
 }
 \examples{
-fileLoc = system.file("extdata", "kirby127a_3_1_ax_283Labels_M2_corrected_stats.txt", package="MRIcloudT1volumetrics")
+fileLoc = system.file("extdata", 
+"kirby127a_3_1_ax_283Labels_M2_corrected_stats.txt", 
+package="MRIcloudT1volumetrics")
 test = readSubject(fileLoc)
 test[[1]]
 }
