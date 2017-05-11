@@ -1,5 +1,5 @@
 #' @name readFileList 
-#' @title A function for readding a list of T1 volumetric mricloud data
+#' @title A function for reading a list of T1 volumetric mricloud data
 #' @param fileList a textlist of files 
 #' @param levelList an optional list of levels to include, needs equal length as \code{typeList}
 #' @param typeList an optional list of types to include, needs equal length to \code{levelList}
