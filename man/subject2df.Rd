@@ -10,6 +10,5 @@ subject2df(subjectData)
 \item{subjectData}{the output from readSubject}
 }
 \description{
-Takes a subject from readSubject and converts it into a single
-dataframe
+Takes a subject list and converts to a data frame
 }

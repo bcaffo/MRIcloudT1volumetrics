@@ -2,7 +2,9 @@
 
 export(addSubjectICV)
 export(addSubjectTBV)
+export(readFileList)
 export(readSubject)
+export(subject2df)
 importFrom(dplyr,filter)
 importFrom(dplyr,mutate)
 importFrom(magrittr,"%>%")

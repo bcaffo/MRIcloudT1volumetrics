@@ -2,7 +2,7 @@
 % Please edit documentation in R/readFileList.R
 \name{readFileList}
 \alias{readFileList}
-\title{A function for readding a list of T1 volumetric mricloud data}
+\title{A function for reading a list of T1 volumetric mricloud data}
 \usage{
 readFileList(fileList, levelList = 5, typeList = 1)
 }

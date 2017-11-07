@@ -7,6 +7,7 @@
 #' from MRIcloud. The files must be a list of files
 #' @importFrom magrittr "%>%"
 #' @importFrom dplyr filter mutate
+#' @export
 readFileList = function(fileList, levelList = 5, typeList = 1){
     if (length(levelList) != length(typeList)) {
         stop("levelList and typeList must have equal length")
