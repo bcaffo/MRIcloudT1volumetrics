@@ -42,6 +42,7 @@ readSubject = function(fileLoc){
     ## loop over the indices and read in the data
     subjectData = lapply(1 : last, 
         function(i){
+            ## These constants were just obtained by inspection of the raw files
             startline = tlidx[i, 3] + 1
             if (i == last) endline = length(fullData)
             else endline = tlidx[i + 1, 3] - 1
@@ -49,7 +50,7 @@ readSubject = function(fileLoc){
                             collapse = "\n")
             dat = utils::read.table(textConnection(toparse),
                              fill = TRUE,
-                             stringsAsFactors = FALSE)#[,1 : 3]
+                             stringsAsFactors = FALSE)
             colnames(dat) = c("rawid", "roi", "volume", "min",	"max",	"mean",	"std")
             dat$type = tlidx[i,1]
             dat$level = tlidx[i,2]
