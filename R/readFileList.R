@@ -12,16 +12,16 @@ readFileList = function(fileList, idList = NULL){
     else if (length(idList) != length(fileList)) {
         stop("idList and fileList must have equal length")
     }
-   
-    rval = NULL
-    for  (i in 1 : length(fileList)){
-        f = fileList[i]
-        tempDat = readSubject(f) %>%
+
+    ## read in each file, convert to data frame,
+    ## add icv and tbv and id variable
+    lapply(1 : length(fileList), function(i) {
+            f = fileList[i]
+            readSubject(f) %>%
             subject2df() %>% 
             addSubjectICV() %>%
             addSubjectTBV() %>%
-            mutate(id = idList[i])
-        rval = rbind(rval, tempDat)
-    }
-    rval
+            mutate(id = idList[i]) 
+        }
+    ) %>% do.call(what = "rbind") #convert to data frame
 }
