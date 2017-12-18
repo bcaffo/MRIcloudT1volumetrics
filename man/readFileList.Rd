@@ -4,14 +4,12 @@
 \alias{readFileList}
 \title{A function for reading a list of T1 volumetric mricloud data}
 \usage{
-readFileList(fileList, levelList = 5, typeList = 1)
+readFileList(fileList, idList = NULL)
 }
 \arguments{
 \item{fileList}{a textlist of files}
 
-\item{levelList}{an optional list of levels to include, needs equal length as \code{typeList}}
-
-\item{typeList}{an optional list of types to include, needs equal length to \code{levelList}}
+\item{idList}{an optional list of ids, otherwise is 1 : length(fileList)}
 }
 \description{
 A function for reading in a collection of files of T1 volumetric output
