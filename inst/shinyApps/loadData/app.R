@@ -1,6 +1,7 @@
 ## Shiny app to load and use MRIcloud T1 volumetric Data
 
 library(shiny)
+library(tidyverse)
 
 # Define UI for application that draws a histogram
 ui = fluidPage(
