@@ -9,6 +9,7 @@ output:
 
 ```{r setup, include=FALSE}
 library(flexdashboard)
+library(shiny)
 library(tidyverse)
 library(MRIcloudT1volumetrics)
 library(sunburstR)
@@ -16,8 +17,9 @@ library(treemap)
 library(RColorBrewer)
 library("magrittr")
 library(D3partitionR)
+```
 
-
+```{r}
 ## Get the hierarchy data
 hierarchyFile = "multilevel_lookup_table.txt"
 hierarchy = read.table(hierarchyFile, header = TRUE, 
@@ -55,7 +57,9 @@ dat = reactive({
             readSubject() %>%
             subject2df() %>%
             addSubjectICV() %>%
-            addSubjectTBV()
+            addSubjectTBV() %>%
+            fixBasalForebrain() %>%
+            fixTarget2()
         }
     })
 

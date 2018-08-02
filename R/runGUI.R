@@ -3,7 +3,7 @@
 #' @param example name of gui, currently only \code{'loaddata'}
 #' @description A function that launches a gui for the loading and analysis of MRICloud output
 #' currently there's only one app named \code{'loaddata'}
-#' @importFrom tidyverse
+#' @importFrom tidyverse 
 #' @export
 ## Adapted from Dean Attali's code
 runGUI = function(example) {

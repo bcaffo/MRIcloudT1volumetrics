@@ -16,5 +16,5 @@ Suggests:
     knitr,
     rmarkdown
 BugReports: https://github.com/bcaffo/MRIcloudT1volumetrics/issues
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.0
 VignetteBuilder: knitr

@@ -11,5 +11,6 @@ spreadROIs(dat)
 }
 \description{
 this function just used tidyverse spread for output specifically from \code{readFileList}
-only does this for volume and only if you haven't modified the data frame. should be ok if you select type and level
+only does this for volume and only if you haven't modified the data frame. 
+should be ok if you select type and level
 }
