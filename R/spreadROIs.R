@@ -26,7 +26,7 @@ spreadROIs = function(dat){
             ## at level 5
             ##
             ##
-            unite(key, roi, type, level, temp,  sep = "_", remove = TRUE) %>%  
+            unite(key, roi, type, level, sep = "_", remove = TRUE) %>%  
             select(-min, -max, -mean, -std) %>% 
             ## Want a unique ICV and TBV per subject. However
             ## I can't figure out any way other than converting the 
