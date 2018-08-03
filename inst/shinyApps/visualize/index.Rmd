@@ -7,7 +7,7 @@ output:
     runtime: shiny
 ---
 
-```{r setup, include=FALSE}
+```{r setup, include=FALSE, cache = FALSE}
 library(flexdashboard)
 library(shiny)
 library(tidyverse)
@@ -17,9 +17,6 @@ library(treemap)
 library(RColorBrewer)
 library("magrittr")
 library(D3partitionR)
-```
-
-```{r}
 ## Get the hierarchy data
 hierarchyFile = "multilevel_lookup_table.txt"
 hierarchy = read.table(hierarchyFile, header = TRUE, 

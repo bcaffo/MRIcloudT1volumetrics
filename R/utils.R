@@ -48,6 +48,8 @@ fixBasalForebrain = function(subjectData){
 }
 
 
+#' @name fixTarget2
+#' @title Fixes a rawid label error
 #' @rdname fixTarget2
 #' @export
 fixTarget2 = function(subjectData){
@@ -55,7 +57,7 @@ fixTarget2 = function(subjectData){
     
     ## add a variable that is one if there's a rawid labeled
     ## target2.img, which seems to happen for some reason
-    subjectData$anyTarget = (rawid == "target2.img") * 1
+    ##subjectData$anyTarget = (rawid == "target2.img") * 1
     
     ## If there's no good values
     if (all(rawid == "target2.img")) stop("rawid is messed up")
@@ -75,10 +77,12 @@ fixTarget2 = function(subjectData){
 }
 
 
+#' @name readSubjectDf
+#' @title reads in a subject as a df
 #' @rdname readSubjectDf
 #' @export
 readSubjectDf = function(filename){
-    filename %>% readSubject %>% subject2df
+    filename %>% readSubject() %>% subject2df
 }
     
     
