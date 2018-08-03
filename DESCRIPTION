@@ -10,6 +10,7 @@ Description: Analyzes the output from the 'T1' volumetric output
     from 'MRIcloud' <https://mricloud.org/>. 
 License: GPL-3
 Imports: 
+    tidyverse,
     dplyr,
     magrittr
 Suggests:

@@ -4,12 +4,16 @@
 \alias{readFileList}
 \title{A function for reading a list of T1 volumetric mricloud data}
 \usage{
-readFileList(fileList, idList = NULL)
+readFileList(fileList, idList = NULL, fixT2 = FALSE, fixBF = FALSE)
 }
 \arguments{
 \item{fileList}{a textlist of files}
 
 \item{idList}{an optional list of ids, otherwise is 1 : length(fileList)}
+
+\item{fixT2}{optional, should the target2.img rawid errors be fixed (for older images)}
+
+\item{fixBF}{optional, should basalForebrain mislabeling be fixed (for older images)}
 }
 \description{
 A function for reading in a collection of files of T1 volumetric output

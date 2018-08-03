@@ -16,7 +16,10 @@ addSubjectICV = function(subjectData){
     return(subjectData)
 }
 
-#' @rdname addSubjectICV
+#' @name addSubjectTBV
+#' @title Adds an ICV measure to subejct data
+#' @param subjectData output from \code{readSubject} in the form of a dataframe
+#' @rdname addSubjectTBV
 #' @export
 addSubjectTBV = function(subjectData){
     level = type = roi = NULL
@@ -33,6 +36,7 @@ addSubjectTBV = function(subjectData){
 #' @name fixBasalForebrain
 #' @title A function for fixing the basal forebrain labeling error
 #' @rdname fixBasalForebrain
+#' @param subjectData output from \code{readSubject} in the form of a dataframe
 #' @export
 fixBasalForebrain = function(subjectData){
     ## 2 on levels 2, 3, 4 (first 6 indices) 
@@ -51,6 +55,7 @@ fixBasalForebrain = function(subjectData){
 #' @name fixTarget2
 #' @title Fixes a rawid label error
 #' @rdname fixTarget2
+#' @param subjectData output from \code{readSubject} in the form of a dataframe
 #' @export
 fixTarget2 = function(subjectData){
     rawid = subjectData$rawid
@@ -79,6 +84,7 @@ fixTarget2 = function(subjectData){
 
 #' @name readSubjectDf
 #' @title reads in a subject as a df
+#' @param filename name of the file to read in
 #' @rdname readSubjectDf
 #' @export
 readSubjectDf = function(filename){

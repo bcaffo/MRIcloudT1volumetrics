@@ -2,12 +2,9 @@
 % Please edit documentation in R/utils.R
 \name{addSubjectICV}
 \alias{addSubjectICV}
-\alias{addSubjectTBV}
 \title{Utility functions}
 \usage{
 addSubjectICV(subjectData)
-
-addSubjectTBV(subjectData)
 }
 \arguments{
 \item{subjectData}{output from \code{readSubject} in the form of a dataframe}
