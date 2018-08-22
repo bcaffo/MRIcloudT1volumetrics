@@ -2,12 +2,9 @@
 % Please edit documentation in R/utils.R
 \name{addSubjectICV}
 \alias{addSubjectICV}
-\alias{addSubjectTBV}
 \title{Utility functions}
 \usage{
 addSubjectICV(subjectData)
-
-addSubjectTBV(subjectData)
 }
 \arguments{
 \item{subjectData}{output from \code{readSubject} in the form of a dataframe}
@@ -16,7 +13,9 @@ addSubjectTBV(subjectData)
 data frame with ICV or TBV added
 }
 \description{
-takes in a subject data frame and adds an ICV variable
+takes in a subject data frame and adds an ICV or TBV variable or 
+fixes errors \code{fixTarget} fixes the error where rawid gets replaced with target
+and \code{fixBasalForebrain} fixes the label error with the basal forebrain in type 1 level 5
 }
 \details{
 addSubjectICV

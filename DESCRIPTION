@@ -10,11 +10,12 @@ Description: Analyzes the output from the 'T1' volumetric output
     from 'MRIcloud' <https://mricloud.org/>. 
 License: GPL-3
 Imports: 
+    tidyverse,
     dplyr,
     magrittr
 Suggests:
     knitr,
     rmarkdown
 BugReports: https://github.com/bcaffo/MRIcloudT1volumetrics/issues
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.0
 VignetteBuilder: knitr

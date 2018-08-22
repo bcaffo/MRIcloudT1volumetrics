@@ -2,7 +2,13 @@
 
 export(addSubjectICV)
 export(addSubjectTBV)
+export(fixBasalForebrain)
+export(fixTarget2)
+export(readFileList)
 export(readSubject)
+export(readSubjectDf)
+export(spreadROIs)
+export(subject2df)
 importFrom(dplyr,filter)
 importFrom(dplyr,mutate)
 importFrom(magrittr,"%>%")
