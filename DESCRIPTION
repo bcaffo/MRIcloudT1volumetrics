@@ -12,6 +12,7 @@ License: GPL-3
 Imports: 
     tidyr,
     dplyr,
+    ggplot2,
     magrittr
 Suggests:
     knitr,
