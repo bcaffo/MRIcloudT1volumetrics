@@ -1,10 +1,13 @@
 #' @name readFileList 
 #' @title A function for reading a list of T1 volumetric mricloud data
-#' @param fileList a textlist of files 
+#' @param fileList a vector of file names, passed to \code{\link{readSubjectDf}}
 #' @param idList an optional list of ids, otherwise is 1 : length(fileList)
-#' @param fixT2 optional, should the target2.img rawid errors be fixed (for older images)
-#' @param fixBF optional, should basalForebrain mislabeling be fixed (for older images)
-#' @description A function for reading in a collection of files of T1 volumetric output
+#' @param fixT2 optional, should the target2.img rawid errors 
+#' be fixed (for older images)
+#' @param fixBF optional, should basalForebrain mislabeling be 
+#' fixed (for older images)
+#' @description A function for reading in a collection of files of 
+#' T1 volumetric output
 #' from MRIcloud. The files must be a list of files
 #' @importFrom magrittr "%>%"
 #' @importFrom dplyr filter mutate

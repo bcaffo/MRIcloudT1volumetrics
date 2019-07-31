@@ -7,15 +7,18 @@
 readFileList(fileList, idList = NULL, fixT2 = FALSE, fixBF = FALSE)
 }
 \arguments{
-\item{fileList}{a textlist of files}
+\item{fileList}{a vector of file names, passed to \code{\link{readSubjectDf}}}
 
 \item{idList}{an optional list of ids, otherwise is 1 : length(fileList)}
 
-\item{fixT2}{optional, should the target2.img rawid errors be fixed (for older images)}
+\item{fixT2}{optional, should the target2.img rawid errors 
+be fixed (for older images)}
 
-\item{fixBF}{optional, should basalForebrain mislabeling be fixed (for older images)}
+\item{fixBF}{optional, should basalForebrain mislabeling be 
+fixed (for older images)}
 }
 \description{
-A function for reading in a collection of files of T1 volumetric output
+A function for reading in a collection of files of 
+T1 volumetric output
 from MRIcloud. The files must be a list of files
 }

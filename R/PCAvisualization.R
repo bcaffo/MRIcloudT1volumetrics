@@ -5,24 +5,32 @@
 #' @param PC index of PC, default = 1
 #' @import ggplot2
 #' @importFrom ggplot2 aes
-#' @importFrom data.table melt
+#' @importFrom dplyr mutate
+#' @importFrom tidyr gather
+#' 
 #' @export
 
 PCAvisualization = function(pca.result, PC = 1){
-    pca.rotations = sapply(pca.result, function(i) i$rotation)
-    dat_visualization = lapply(pca.rotations, function(i){
-      prop.table(abs(i),margin = 2) %>%
-        melt() %>%
-        `colnames<-` (c('roi','Comp','value')) %>%
-        filter(Comp == paste0('PC',PC)) %>% select(c(roi,value))
-      }) %>%
-      do.call(what = "rbind") #convert to data frame
-    dat_visualization = dat_visualization %>%
-      mutate(Age = sapply(strsplit(rownames(dat_visualization), "[.]"),function(x) x[1])
-             ) # rownames reformat
-
-
-    ggplot(dat_visualization, aes(x = Age,y = value,colour = roi,group = roi)) +
-      geom_line() +
-      labs(x = 'Age', y = 'Weight', title = paste0('Compositional analysis: weight of ROIs in PC',PC))
+  roi = Comp = id = value = NULL
+  pca.rotations = sapply(pca.result, function(i) i$rotation)
+  dat_visualization = lapply(pca.rotations, function(i){
+    df = prop.table(abs(i),margin = 2) %>%
+      as.data.frame()
+    df = df %>% 
+      mutate(id = 1:nrow(df))
+    df = df %>% 
+      tidyr::gather(key = roi, value = Comp, -id)
+    df %>% 
+      filter(Comp == paste0('PC',PC)) %>% 
+      select(c(roi, value))
+  }) %>%
+    do.call(what = "rbind") #convert to data frame
+  dat_visualization = dat_visualization %>%
+    mutate(Age = sapply(strsplit(rownames(dat_visualization), "[.]"),function(x) x[1])
+    ) # rownames reformat
+  
+  
+  ggplot(dat_visualization, aes(x = Age,y = value,colour = roi,group = roi)) +
+    geom_line() +
+    labs(x = 'Age', y = 'Weight', title = paste0('Compositional analysis: weight of ROIs in PC',PC))
 }

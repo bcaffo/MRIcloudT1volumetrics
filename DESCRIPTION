@@ -1,8 +1,8 @@
 Package: MRIcloudT1volumetrics
 Type: Package
 Title: MRIcloud Analysis of T1 Volumetric Output
-Version: 0.3.0
-Date: 2018-08-20
+Version: 0.3.1
+Date: 2019-07-31
 Authors@R: person("Brian", "Caffo", email = "bcaffo@gmail.com", 
     role = c("aut", "cre"))
 Maintainer: Brian Caffo <bcaffo@gmail.com>
@@ -13,7 +13,9 @@ Imports:
     tidyr,
     dplyr,
     ggplot2,
-    magrittr
+    magrittr,
+    stats,
+    utils
 Suggests:
     knitr,
     rmarkdown
