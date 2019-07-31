@@ -1,21 +1,37 @@
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
 # MRIcloudT1volumetrics
 
-The goal of MRIcloudT1volumetrics is to analyze the T1 volumetric output from [MRIcloud](https://mricloud.org/). 
+<!-- badges: start -->
+
+@bcaffo [![Travis build
+status](https://travis-ci.org/bcaffo/MRIcloudT1volumetrics.svg?branch=master)](https://travis-ci.org/bcaffo/MRIcloudT1volumetrics)
+[![AppVeyor build
+status](https://ci.appveyor.com/api/projects/status/github/bcaffo/MRIcloudT1volumetrics?branch=master&svg=true)](https://ci.appveyor.com/project/bcaffo/MRIcloudT1volumetrics)
+
+@muschellij2 [![Travis build
+status](https://travis-ci.com/muschellij2/MRIcloudT1volumetrics.svg?branch=master)](https://travis-ci.com/muschellij2/MRIcloudT1volumetrics)
+[![AppVeyor build
+status](https://ci.appveyor.com/api/projects/status/github/muschellij2/MRIcloudT1volumetrics?branch=master&svg=true)](https://ci.appveyor.com/project/muschellij2/MRIcloudT1volumetrics)
+<!-- badges: end -->
+
+The goal of MRIcloudT1volumetrics is to analyze the T1 volumetric output
+from [MRIcloud](https://mricloud.org/).
 
 ## Installation
 
-You can install MRIcloudT1volumetrics from github with:
+You can install the released version of MRIcloudT1volumetrics from
+[CRAN](https://CRAN.R-project.org) with:
 
+``` r
+# NO, you cannot
+# install.packages("MRIcloudT1volumetrics")
+```
+
+And the development version from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
 devtools::install_github("bcaffo/MRIcloudT1volumetrics")
-```
-
-## Example
-
-This is a basic example which shows you how to solve a common problem:
-
-``` r
-## basic example code
 ```
