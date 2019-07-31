@@ -33,5 +33,5 @@ And the development version from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("muschellij2/MRIcloudT1volumetrics")
+devtools::install_github("bcaffo/MRIcloudT1volumetrics")
 ```
