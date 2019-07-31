@@ -11,7 +11,9 @@
 #' @export
 
 PCAvisualization = function(pca.result, PC = 1){
-  roi = Comp = id = value = NULL
+  Age = roi = Comp = id = value = NULL
+  rm(list = c("Age", "roi", "Comp", "id", "value"))
+  
   pca.rotations = sapply(pca.result, function(i) i$rotation)
   dat_visualization = lapply(pca.rotations, function(i){
     df = prop.table(abs(i),margin = 2) %>%
