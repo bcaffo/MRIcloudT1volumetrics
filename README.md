@@ -5,7 +5,12 @@
 
 <!-- badges: start -->
 
-[![Travis build
+@bcaffo [![Travis build
+status](https://travis-ci.org/bcaffo/MRIcloudT1volumetrics.svg?branch=master)](https://travis-ci.org/bcaffo/MRIcloudT1volumetrics)
+[![AppVeyor build
+status](https://ci.appveyor.com/api/projects/status/github/bcaffo/MRIcloudT1volumetrics?branch=master&svg=true)](https://ci.appveyor.com/project/bcaffo/MRIcloudT1volumetrics)
+
+@muschellij2 [![Travis build
 status](https://travis-ci.com/muschellij2/MRIcloudT1volumetrics.svg?branch=master)](https://travis-ci.com/muschellij2/MRIcloudT1volumetrics)
 [![AppVeyor build
 status](https://ci.appveyor.com/api/projects/status/github/muschellij2/MRIcloudT1volumetrics?branch=master&svg=true)](https://ci.appveyor.com/project/muschellij2/MRIcloudT1volumetrics)
