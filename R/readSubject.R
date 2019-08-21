@@ -48,12 +48,14 @@ readSubject = function(fileLoc){
             else endline = tlidx[i + 1, 3] - 1
             toparse = paste(fullData[startline : endline], "",
                             collapse = "\n")
-            dat = utils::read.table(textConnection(toparse),
+            tc = textConnection(toparse)
+            dat = utils::read.table(tc,
                              fill = TRUE,
                              stringsAsFactors = FALSE)
             colnames(dat) = c("rawid", "roi", "volume", "min",	"max",	"mean",	"std")
             dat$type = tlidx[i,1]
             dat$level = tlidx[i,2]
+            close(tc)
             return(dat)
        }
     )
